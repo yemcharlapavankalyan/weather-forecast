@@ -34,7 +34,6 @@ async function getWeather() {
     }
 }
 
-// Map OpenWeatherMap weather codes to descriptions (simplified)
 function mapWeatherCode(code) {
     if (code >= 200 && code < 300) return "Thunderstorm";
     if (code >= 300 && code < 400) return "Drizzle";
@@ -46,15 +45,14 @@ function mapWeatherCode(code) {
     return "Unknown Weather";
 }
 
-// Map OpenWeatherMap weather codes to icons (you can customize icons)
 function getWeatherIcon(code) {
-    if (code === 800) return "https://cdn-icons-png.flaticon.com/512/869/869869.png"; // Clear
-    if (code >= 200 && code < 300) return "https://cdn-icons-png.flaticon.com/512/1146/1146869.png"; // Thunderstorm
-    if (code >= 300 && code < 400) return "https://cdn-icons-png.flaticon.com/512/2932/2932439.png"; // Drizzle
-    if (code >= 500 && code < 600) return "https://cdn-icons-png.flaticon.com/512/1163/1163623.png"; // Rain
-    if (code >= 600 && code < 700) return "https://cdn-icons-png.flaticon.com/512/1146/1146867.png"; // Snow
-    if (code >= 700 && code < 800) return "https://cdn-icons-png.flaticon.com/512/1779/1779816.png"; // Fog/Mist
-    if (code > 800 && code < 900) return "https://cdn-icons-png.flaticon.com/512/1163/1163624.png"; // Clouds
+    if (code === 800) return "https://cdn-icons-png.flaticon.com/512/869/869869.png"; //this it for Clear Icon
+    if (code >= 200 && code < 300) return "https://cdn-icons-png.flaticon.com/512/1146/1146869.png"; // Thunderstorm Icon
+    if (code >= 300 && code < 400) return "https://cdn-icons-png.flaticon.com/512/2932/2932439.png"; // Drizzle Icon
+    if (code >= 500 && code < 600) return "https://cdn-icons-png.flaticon.com/512/1163/1163623.png"; // Rain Icon
+    if (code >= 600 && code < 700) return "https://cdn-icons-png.flaticon.com/512/1146/1146867.png"; // Snow Icon
+    if (code >= 700 && code < 800) return "https://cdn-icons-png.flaticon.com/512/1779/1779816.png"; // Fog/Mist Icon
+    if (code > 800 && code < 900) return "https://cdn-icons-png.flaticon.com/512/1163/1163624.png"; // Clouds Icon
     return "https://cdn-icons-png.flaticon.com/512/869/869869.png"; // Default icon
 }
 
